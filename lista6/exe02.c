@@ -7,6 +7,7 @@
 int main(){
 
 	char gabarito[quantaluno - 1], resposta[quantaluno - 1];
+	//são 15 alunos, mas array vai de [0 a 14], logo precisa subtrair 1 para dar certo.
 
 	float aprov_perc;
 	float aprovados = 0;
