@@ -1,23 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
+#define quantaluno 15
+#define quantquest 10
 
-	char gabarito[7], resposta[7];
-	int aluno, matricula, ponto;
+int main(){
 
-	char temp;
+	char gabarito[quantaluno - 1], resposta[quantaluno - 1];
 
-	printf("-- Correção de provas --\n");
+	float aprov_perc;
+	float aprovados = 0;
 
-	printf("Primeiro, digite o gabarito: \n");
+	int pontos = 0;
+	int numero;
 
-	for(int i = 0; i < 8; i++) {
-		printf("Questão %d: ", i + 1);
-		scanf("%s", &temp);
+	printf("Digite a resposta da \n");
+	for(int i = 0; i < quantquest; i++) {
+		printf("Questao %d: ", i + 1);
+		scanf("%s", &gabarito[i]);
 	}
 
+	for(int i = 0; i < quantaluno; i++){
+		
+		printf("\nDigite o número do aluno: ");
+		scanf("%d", &numero);
 
+		for(int j = 0; j < quantquest; j++){
+			printf("Respota questão %d: ", j+1);
+			scanf("%s", &resposta[j]);
+			if(resposta[j] == gabarito[j]){
+				pontos++;
+			}
+		}
+
+		printf("A nota do aluno %d foi %d pontos\n\n", numero, pontos);		
+
+		if(pontos >= 6){
+			aprovados = aprovados + 1;	
+		}
+
+		pontos = 0;
+
+	}
+
+	aprov_perc = (aprovados * 100) / quantaluno;
+	printf("-- O percentual de aprovados é de: %.2f%%\n\n", aprov_perc);
 
 	return 0;
 }
