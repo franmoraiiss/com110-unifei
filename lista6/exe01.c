@@ -3,7 +3,7 @@
 
 int main(){
 
-	int vetor[7];	//8 vetores de [0 a 7]
+	int vetor[8];	
 	int temp;		//Valor temporário
 	int i, j, k;	//Variáveis contadoras
 
