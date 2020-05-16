@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define quantaluno 15 
+#define quantaluno 15
 #define quantquest 10 
-#define mediaaprov 6 //média de aprovação
+#define mediaaprov 6 //média para aprovar
 
 int main(){
 
-	char gabarito[quantaluno - 1], resposta[quantaluno - 1];
-	//são 15 alunos, mas array vai de [0 a 14], logo precisa subtrair 1 para dar certo.
+	char gabarito[quantaluno], resposta[quantaluno];
 
-	int matricula[quantaluno - 1];
+	int matricula[quantaluno];
 
 	float aprov_perc;
 	float aprovados = 0;
@@ -25,7 +24,7 @@ int main(){
 	}
 
 	for(int i = 0; i < quantaluno; i++){
-
+		
 		printf("\nDigite o número do aluno: ");
 		scanf("%d", &numero);
 
@@ -43,10 +42,8 @@ int main(){
 		matricula[i] = numero;
 
 		for(int j = 0; j < quantquest; j++){
-			
 			printf("Resposta questão %d: ", j+1);
 			scanf(" %c", &resposta[j]);
-
 			if(resposta[j] == gabarito[j]){
 				pontos++;
 			}
