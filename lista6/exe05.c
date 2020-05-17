@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define size 25
+#define size 50
 
 int main(){
 

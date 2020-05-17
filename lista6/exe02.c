@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define quantaluno 15
-#define quantquest 10 
+#define quantaluno 10
+#define quantquest 8 
 #define mediaaprov 6 //média para aprovar
 
 int main(){
