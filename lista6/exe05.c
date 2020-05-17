@@ -33,7 +33,7 @@ int main(){
 
 		//Ao digitar ponto, virgula, chaves, ou qualquer caracter de decimal < 97 e decimal > 122, o programa não aceita
 		if((palavra[i]) < 97 || (palavra[i]) > 122) {
-			printf("\n=> Possui caracter inválido! Digite apenas letras.\n");
+			printf("\n=> Palavra possui caracter inválido! Digite apenas letras.\n");
 			goto start;
 		}
 
