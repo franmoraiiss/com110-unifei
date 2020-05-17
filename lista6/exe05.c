@@ -19,12 +19,11 @@ int main(){
 	scanf("%d", &n);
 
 	//Número negativos são usados para descriptografar a cifra de Cesar, por isso não é permitido
-	//Caso ele digite 0 não vai criptografar nada, então não faz sentido aceitar 0.
 	//Não faz sentido digitar número >= 26, pois digitar 26 é o mesmo que digitar 0, a frase não muda.
 	//Por exemplo: 'a' + 26 = 'a', pois ao passar da letra 'z', retornamos a letra 'a'.
 
-	while(n <= 0 || n >= 26) {
-		printf("=> Valor inválido. Digite um número entre 0 e 26: ");
+	while(n < 0 || n >= 26) {
+		printf("=> Valor inválido. Digite um números no intervalo [0, 25]: ");
 		scanf("%d", &n);
 	}
 
